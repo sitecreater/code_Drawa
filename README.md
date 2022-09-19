@@ -9,7 +9,7 @@ https://capstone-pwa.firebaseapp.com/
 ## Drawa 사이트란?
 **한정판 신발과 옷을 구매 혹은 응모 할 수 있는 사이트이며 그 밖에 시세확인, 장바구니, 모바일 navbar 기능이 있습니다.**
 
-## 포트폴리오 페이지에 사용한 기술
+## Drawa 페이지에 사용한 기술
 ### React, CSS, Firebase, Firebase Hosting
 
 ## 반응형 웹페이지
