@@ -2,7 +2,7 @@
 import React, {lazy, Suspense} from 'react';
 import {Routes, Route} from 'react-router-dom'
 import HeaderBar from './Components/HeaderBar';
-import LoginPage from './Routes/LoginPage';
+import LoginPage from './Devisement/LoginPage';
 import './CSS/App.css';
 import Trading from './Components/Trading';
 import FooterBar from './Components/FooterBar';
@@ -14,6 +14,7 @@ import DrawInfo from './Routes/DrawInfo';
 import './firebase';
 import DrawDone from './Routes/DrawDone';
 import ShopPay from './Routes/ShopPay';
+import Random from './Devisement/Random';
 
 const Draw = lazy(() => import ('./Routes/Draw'));
 const Shop = lazy(() => import ('./Routes/Shop'));
@@ -29,7 +30,8 @@ function App() {
                     <Route path="/loginPage" element={<LoginPage />}/>
                     <Route path="/draw" element={<Draw />}/>
                     <Route path="/drawDetail/:id" element={<DrawDetail />}/>
-                    <Route path="/drawInfo" element={<DrawInfo />}/>
+                    <Route path="/drawInfo" element={<DrawInfo />} />
+                    <Route path="/random" element={<Random />}/>
                     <Route path="/drawDone" element={<DrawDone />}/>
                     <Route path="/shop" element={<Shop />}/>
                     <Route path="/shopDetail/:id" element={<ShopDetail />}/>
