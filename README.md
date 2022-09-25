@@ -1,4 +1,4 @@
-# Drawa 프로젝트 코드 보관
+# Drawa Project Code 보관
 
 보러가기
 https://capstone-pwa.firebaseapp.com/

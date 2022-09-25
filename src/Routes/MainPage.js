@@ -14,7 +14,7 @@ function MainPage() {
                 <div className='row'>
                     <div className="col-md-6 pt-5">
                         <img
-                            src={"https://raw.githubusercontent.com/sitecreater/drawaStorage.github.io/main/main.jpg"}
+                            src={"https://github.com/sitecreater/storage_Drawa.github.io/blob/main/main.jpg?raw=true"}
                             width="82%"
                             alt=''/>
                     </div>
