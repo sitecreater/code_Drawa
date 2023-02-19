@@ -1,6 +1,6 @@
-import {initializeApp} from "firebase/app";
-import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
-import {getFirestore} from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "capstone-pwa",
   storageBucket: "capstone-pwa.appspot.com",
   messagingSenderId: "472694429580",
-  appId: "1:472694429580:web:281785b9f3b391bc77a8a9"
+  appId: "1:472694429580:web:281785b9f3b391bc77a8a9",
 };
 
 // Initialize Firebase
@@ -22,20 +22,20 @@ export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export const signInWithGoolgle = () => {
-    signInWithPopup(auth, provider)
-        .then((result) => {
-            const name = result.user.displayName;
-            const email = result.user.email;
-            const profilePic = result.user.photoURL;
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const name = result.user.displayName;
+      const email = result.user.email;
+      const profilePic = result.user.photoURL;
 
-            localStorage.setItem("name", name);
-            localStorage.setItem("email", email);
-            localStorage.setItem("profilePic", profilePic);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    };
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("profilePic", profilePic);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 const messaging = getMessaging();
 //토큰값 얻기
 getToken(messaging, {

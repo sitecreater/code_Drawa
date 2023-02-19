@@ -1,40 +1,40 @@
 .main-bg {
-    height: 150px;
-    background-image: url("./../Image/DrawaLogo.png");
-    background-size: 570px;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 150px;
+  background-image: url("./../Image/DrawaLogo.png");
+  background-size: 570px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainText {
-    padding: 10px;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bolder;
+  padding: 10px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .subText {
-    padding: 3%;
-    text-align: center;
-    font-size: medium;
+  padding: 3%;
+  text-align: center;
+  font-size: medium;
 }
 
 .loginText {
-    padding: 60px;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bolder;
+  padding: 60px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .tipBox {
-    font-weight: 600;
-    margin-top: 20px;
-    padding-top: 5px;
-    background: #eee;
-    text-align: center;
-    border: 3px solid #eee;
-    border-radius: 3%;
-    transition: all ease 2s 0s;
+  font-weight: 600;
+  margin-top: 20px;
+  padding-top: 5px;
+  background: #eee;
+  text-align: center;
+  border: 3px solid #eee;
+  border-radius: 3%;
+  transition: all ease 2s 0s;
 }
