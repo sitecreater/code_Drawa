@@ -3,6 +3,9 @@
 **보러가기**
 https://capstone-pwa.firebaseapp.com/
 
+**개발과정**
+https://github.com/sitecreater/storage_Drawa.github.io/blob/main/shop3.jpg?raw=true
+
 ## 소개
 
 **Drawa 웹 사이트 프로젝트 개발에 사용 된 코드 입니다.**
