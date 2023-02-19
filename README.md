@@ -1,9 +1,9 @@
 # Drawa Project Code 보관
 
-**보러가기**
+**보러 가기**
 https://capstone-pwa.firebaseapp.com/
 
-**개발과정**
+**개발 과정**
 https://github.com/sitecreater/storage_Drawa.github.io/blob/main/shop3.jpg?raw=true
 
 ## 소개
