@@ -4,7 +4,7 @@
 https://capstone-pwa.firebaseapp.com/
 
 **개발 과정**
-https://github.com/sitecreater/storage_Drawa.github.io/blob/main/shop3.jpg?raw=true
+https://github.com/sitecreater/storage_Drawa.github.io/blob/main/Drawa_Process.docx?raw=true
 
 ## 소개
 
