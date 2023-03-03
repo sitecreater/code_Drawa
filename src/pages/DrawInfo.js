@@ -69,48 +69,21 @@ function DrawInfo() {
       <div className="container py-5">
         <div className="row pt-5">
           <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
-                <Form.Control
-                  value={nickName.nickName}
-                  onChange={(e) => SetName("nickName", e.target.value)}
-                  type="nickName"
-                  placeholder="NickName"
-                />
+                <Form.Control value={nickName.nickName} onChange={(e) => SetName("nickName", e.target.value)} type="nickName" placeholder="NickName" />
               </Col>
             </Form.Group>
 
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
-                <Form.Control
-                  value={address.address}
-                  onChange={(e) => SetLocation("address", e.target.value)}
-                  type="address"
-                  placeholder="Address"
-                />
+                <Form.Control value={address.address} onChange={(e) => SetLocation("address", e.target.value)} type="address" placeholder="Address" />
               </Col>
             </Form.Group>
 
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
-                <Form.Control
-                  value={size.size}
-                  onChange={(e) => SetWear("size", e.target.value)}
-                  type="size"
-                  placeholder="Size"
-                />
+                <Form.Control value={size.size} onChange={(e) => SetWear("size", e.target.value)} type="size" placeholder="Size" />
               </Col>
             </Form.Group>
             <br />

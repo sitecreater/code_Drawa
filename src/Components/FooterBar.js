@@ -28,10 +28,7 @@ function FooterBar() {
         <Dis className="pt-5">
           <Navbar bg="light" variant="light">
             <Container>
-              <Navbar.Collapse
-                id="basic-navbar-nav"
-                className="d-flex justify-content-between"
-              >
+              <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-between">
                 <Nav.Link as={Link} to="/">
                   <i
                     className="fa-solid fa-house"

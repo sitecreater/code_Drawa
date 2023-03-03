@@ -39,8 +39,7 @@ export const signInWithGoolgle = () => {
 const messaging = getMessaging();
 //토큰값 얻기
 getToken(messaging, {
-  vapidKey:
-    "BMsMhx4QL9wMNjyaJm8OOAYXsHAJZ4eEfrtplTRwG1lwx_3HL_AT7sLGv29OIjvMWhZkQd-Mv0xmlXziez4U1J8",
+  vapidKey: "BMsMhx4QL9wMNjyaJm8OOAYXsHAJZ4eEfrtplTRwG1lwx_3HL_AT7sLGv29OIjvMWhZkQd-Mv0xmlXziez4U1J8",
 })
   .then((currentToken) => {
     if (currentToken) {
@@ -49,9 +48,7 @@ getToken(messaging, {
       console.log(currentToken);
     } else {
       // Show permission request UI
-      console.log(
-        "No registration token available. Request permission to generate one."
-      );
+      console.log("No registration token available. Request permission to generate one.");
       // ...
     }
   })

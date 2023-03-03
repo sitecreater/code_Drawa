@@ -2,23 +2,23 @@
 import React, { lazy, Suspense } from "react";
 import Fade from "react-reveal/Fade";
 import { Routes, Route } from "react-router-dom";
-import HeaderBar from "./Components/HeaderBar";
-import LoginPage from "./Logic/LoginPage";
-import "./CSS/App.css";
-import Trading from "./Components/Trading";
-import FooterBar from "./Components/FooterBar";
-import DrawDetail from "./Routes/DrawDetail";
-import ShopDetail from "./Routes/ShopDetail";
-import MainPage from "./Routes/MainPage";
-import Cart from "./Components/Cart";
-import DrawInfo from "./Routes/DrawInfo";
+import HeaderBar from "./components/HeaderBar";
+import LoginPage from "./assets/LoginPage";
+import "./App.css";
+import Trading from "./components/Trading";
+import FooterBar from "./components/FooterBar";
+import DrawDetail from "./pages/DrawDetail";
+import ShopDetail from "./pages/ShopDetail";
+import MainPage from "./pages/MainPage";
+import Cart from "./components/Cart";
+import DrawInfo from "./pages/DrawInfo";
 import "./firebase";
-import DrawDone from "./Routes/DrawDone";
-import ShopPay from "./Routes/ShopPay";
-import Random from "./Logic/Random";
+import DrawDone from "./pages/DrawDone";
+import ShopPay from "./pages/ShopPay";
+import Random from "./assets/Random";
 
-const Draw = lazy(() => import("./Routes/Draw"));
-const Shop = lazy(() => import("./Routes/Shop"));
+const Draw = lazy(() => import("./pages/Draw"));
+const Shop = lazy(() => import("./pages/Shop"));
 
 function App() {
   return (

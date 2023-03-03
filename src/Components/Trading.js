@@ -34,8 +34,7 @@ function Trading() {
                   <h6 className="pb-4">{draw.name}</h6>
                   <Alert variant="dark">Release Price : {draw.price}원</Alert>
                   <Alert variant="success">
-                    Today Price : {draw.todayPrice}원
-                    <i class="fa-solid fa-up-long"></i>
+                    Today Price : {draw.todayPrice}원<i class="fa-solid fa-up-long"></i>
                   </Alert>
                 </div>
               </div>

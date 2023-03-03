@@ -1,6 +1,6 @@
 .main-bg {
   height: 150px;
-  background-image: url("./../Image/DrawaLogo.png");
+  background-image: url("./../images/DrawaLogo.png");
   background-size: 570px;
   background-position: center;
   display: flex;

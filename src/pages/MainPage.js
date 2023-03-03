@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import React, { useState } from "react";
-import "./../CSS/MainPage.css";
+import "./../styles/MainPage.css";
 import { Link } from "react-router-dom";
 import Slide from "react-reveal/Slide";
 
@@ -13,24 +13,12 @@ function MainPage() {
       <div className="container">
         <div className="row">
           <div className="col-md-6 pt-5">
-            <img
-              src={
-                "https://github.com/sitecreater/storage_Drawa.github.io/blob/main/main.jpg?raw=true"
-              }
-              width="82%"
-              alt=""
-            />
+            <img src={"https://github.com/sitecreater/storage_Drawa.github.io/blob/main/main.jpg?raw=true"} width="82%" alt="" />
           </div>
           <div className="col-md-6 pt-5 my-auto">
-            <div className="mainText pt-5">
-              나만을 위한 한정판 신발을 얻어보세요
-            </div>
-            <div className="subText">
-              Drawa 사이트는 응모(draw)와 상품 구매 항목으로 나뉩니다.
-            </div>
-            <div>
-              어려움 없이 간편하게 응모하고 상품 구매도 편하게 이용할 수 있어요.
-            </div>
+            <div className="mainText pt-5">나만을 위한 한정판 신발을 얻어보세요</div>
+            <div className="subText">Drawa 사이트는 응모(draw)와 상품 구매 항목으로 나뉩니다.</div>
+            <div>어려움 없이 간편하게 응모하고 상품 구매도 편하게 이용할 수 있어요.</div>
             <div className="pt-5">
               <Button variant="dark" as={Link} to="/draw" onClick={() => {}}>
                 드로우 상품 보러가기

@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { signInWithGoolgle } from "../firebase";
-import "./../CSS/MainPage.css";
+import "./../styles/MainPage.css";
 
 function LoginPage() {
   return (
@@ -9,43 +9,27 @@ function LoginPage() {
       <div className="container pt-5">
         <div className="row pt-5">
           <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
                 <Form.Control type="id" placeholder="ID" />
               </Col>
             </Form.Group>
 
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
                 <Form.Control type="password" placeholder="Password" />
               </Col>
             </Form.Group>
             <br />
             <div className="loginText pt-5">
-              <h1>
-                {localStorage.getItem("name")}님 Drawa의 세계에 오신 걸
-                환영합니다!
-              </h1>
+              <h1>{localStorage.getItem("name")}님 Drawa의 세계에 오신 걸 환영합니다!</h1>
               <h5 className="pt-5">
                 당신의 이메일은 {localStorage.getItem("email")}
                 이고,
               </h5>
               <h5>
                 멋진 프로필
-                <img
-                  src={localStorage.getItem("profilePic")}
-                  width="8%"
-                  alt=""
-                />
-                을 가지셧네요!
+                <img src={localStorage.getItem("profilePic")} width="8%" alt="" />을 가지셧네요!
               </h5>
             </div>
             <div className="d-grid gap-1">
