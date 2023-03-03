@@ -15,6 +15,7 @@
   * firebase FCM
   * firebase Auth
   * firebase Hosting
+  * PWA
 
 - 보러 가기
   https://capstone-pwa.firebaseapp.com/
