@@ -5,7 +5,7 @@
 
 - 사용 된 기술
 
-  Redux   React hooks   React component   React-bootstrap   styled-components   Router   firebase FCM   firebase Auth   firebase Hosting
+  Redux   \\React hooks   React component   React-bootstrap   styled-components   Router   firebase FCM   firebase Auth   firebase Hosting
 
 - 보러 가기
   https://capstone-pwa.firebaseapp.com/
