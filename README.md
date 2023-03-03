@@ -5,11 +5,13 @@ bbbbbb# code_Drawa
 
 * 사용 된 기술
   * Redux
-  * ㅇㅇ
-  * ㅇㅇ
-  * ㅇㅇ
-
-  Redux <br>React hooks</br> <br>React component</br> <br>React-bootstrap</br> <br>styled-components</br> <br>Router</br> <br>firebase FCM</br> <br>firebase Auth</br> <br>firebase Hosting</br>
+  * React hooks
+  * React-bootstrap
+  * styled-components
+  * Router
+  * firebase FCM
+  * firebase Auth
+  * firebase Hosting
 
 - 보러 가기
   https://capstone-pwa.firebaseapp.com/
