@@ -17,15 +17,3 @@ bbbbbb# code_Drawa
   https://capstone-pwa.firebaseapp.com/
 - 개발 과정
   https://github.com/sitecreater/storage_Drawa.github.io/blob/main/Drawa_Process.docx?raw=true
-  
-* 빨강
-  * 녹색
-    * 파랑
-
-+ 빨강
-  + 녹색
-    + 파랑
-
-- 빨강
-  - 녹색
-    - 파랑
