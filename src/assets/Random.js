@@ -11,7 +11,7 @@ function Random() {
 
   return (
     <div className="Random py-5">
-      <h1>{`추첨 번호`}</h1>
+      <h1>{`응모 번호`}</h1>
       <button onClick={() => getRandomNumber()}>{"추첨 하기"}</button>
       <p>{sampleNumber}</p>
     </div>

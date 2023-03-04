@@ -1,14 +1,13 @@
+import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
 import db from "../firebase.js";
 
 function DrawInfo() {
   const [nickName, setNickName] = useState({});
   const [address, setAddress] = useState({});
   const [size, setSize] = useState({});
-
   const [errors, setErrors] = useState({});
 
   const SetLocation = (location, value) => {
@@ -24,7 +23,7 @@ function DrawInfo() {
       });
   };
 
-  const SetWear = (wear, value) => {
+  const SetShoes = (wear, value) => {
     setSize({
       ...size,
       [wear]: value,
@@ -83,7 +82,7 @@ function DrawInfo() {
 
             <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
               <Col sm="sm">
-                <Form.Control value={size.size} onChange={(e) => SetWear("size", e.target.value)} type="size" placeholder="Size" />
+                <Form.Control value={size.size} onChange={(e) => SetShoes("size", e.target.value)} type="size" placeholder="Size" />
               </Col>
             </Form.Group>
             <br />

@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from "react";
-import db from "../firebase.js";
-import { collection, onSnapshot } from "firebase/firestore";
 import Alert from "react-bootstrap/Alert";
+import { getDrawData } from "../firebase.js";
 
 function Trading() {
-  const [draw, setDraw] = useState([]); //Draw 상품 배열 정렬 변수
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "draw"), (snapshot) =>
-        setDraw(
-          snapshot.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }))
-        )
-      ),
-    []
-  ); //firebase로 draw DB 불러오기
+  const [draw, setDraw] = useState([]);
+
+  useEffect(() => {
+    getDrawData(setDraw);
+  }, []);
 
   return (
     <div className="Trading">

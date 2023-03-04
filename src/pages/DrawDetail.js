@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 function DrawDetail() {
   const location = useLocation(); //Location 함수로 전송된 navigate props 값을 받기
-  console.log("state", location.state);
   const { url, name, price, endDate } = location.state;
   let navigate = useNavigate(); //Navigate 함수 호출
 

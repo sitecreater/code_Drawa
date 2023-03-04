@@ -2,11 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function ShopItem() {
+function ShopDetail() {
   const location = useLocation();
-  console.log("state", location.state);
   const { url, name, price } = location.state;
-
   let navigate = useNavigate(); //Navigate 함수 호출
 
   return (
@@ -51,4 +49,4 @@ function ShopItem() {
   );
 }
 
-export default ShopItem;
+export default ShopDetail;

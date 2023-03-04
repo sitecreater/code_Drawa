@@ -1,9 +1,8 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import "./../CSS/Cart.css";
+import "./../styles/Cart.css";
 
 function Cart(props) {
   let state = useSelector((state) => state);

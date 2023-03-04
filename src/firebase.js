@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { collection, getFirestore, onSnapshot } from "firebase/firestore";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
@@ -14,11 +14,32 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default getFirestore();
+const db = getFirestore(app);
+export default db;
 
-//구글 로그인 로직
-export const auth = getAuth(app);
+//Draw db호출
+export const getDrawData = (setDraw) =>
+  onSnapshot(collection(db, "draw"), (snapshot) =>
+    setDraw(
+      snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }))
+    )
+  );
 
+//Shop db호출
+export const getShopData = (setShop) =>
+  onSnapshot(collection(db, "shop"), (snapshot) =>
+    setShop(
+      snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }))
+    )
+  );
+
+//Google login
 const provider = new GoogleAuthProvider();
 
 export const signInWithGoolgle = () => {
@@ -36,8 +57,12 @@ export const signInWithGoolgle = () => {
       console.log(error);
     });
 };
-const messaging = getMessaging();
+
+export const auth = getAuth(app);
+
 //토큰값 얻기
+const messaging = getMessaging();
+
 getToken(messaging, {
   vapidKey: "BMsMhx4QL9wMNjyaJm8OOAYXsHAJZ4eEfrtplTRwG1lwx_3HL_AT7sLGv29OIjvMWhZkQd-Mv0xmlXziez4U1J8",
 })

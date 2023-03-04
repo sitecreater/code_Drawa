@@ -1,21 +1,21 @@
 /* eslint-disable */
 import React, { lazy, Suspense } from "react";
 import Fade from "react-reveal/Fade";
-import { Routes, Route } from "react-router-dom";
-import HeaderBar from "./components/HeaderBar";
-import LoginPage from "./assets/LoginPage";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Trading from "./components/Trading";
-import FooterBar from "./components/FooterBar";
-import DrawDetail from "./pages/DrawDetail";
-import ShopDetail from "./pages/ShopDetail";
-import MainPage from "./pages/MainPage";
-import Cart from "./components/Cart";
-import DrawInfo from "./pages/DrawInfo";
-import "./firebase";
-import DrawDone from "./pages/DrawDone";
-import ShopPay from "./pages/ShopPay";
+import LoginPage from "./assets/LoginPage";
 import Random from "./assets/Random";
+import Cart from "./pages/Cart";
+import FooterBar from "./components/FooterBar";
+import HeaderBar from "./components/HeaderBar";
+import Trading from "./pages/Trading";
+import "./firebase";
+import DrawDetail from "./pages/DrawDetail";
+import DrawDone from "./pages/DrawDone";
+import DrawInfo from "./pages/DrawInfo";
+import MainPage from "./pages/MainPage";
+import ShopDetail from "./pages/ShopDetail";
+import ShopPay from "./pages/ShopPay";
 
 const Draw = lazy(() => import("./pages/Draw"));
 const Shop = lazy(() => import("./pages/Shop"));

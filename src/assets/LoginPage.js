@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { signInWithGoolgle } from "../firebase";
 import "./../styles/MainPage.css";
 

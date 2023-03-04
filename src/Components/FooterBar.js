@@ -1,25 +1,7 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components"; //style components를 선언
-
-let Fix = styled.div`
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-
-  &:hover {
-    opacity: 1;
-    transition-duration: 1.5s;
-  }
-`; //Fix div 선언
-
-const Dis = styled.div`
-  &:hover ~ ${Fix} {
-    opacity: 1;
-  }
-`; //Dis div 선언
 
 function FooterBar() {
   return (
@@ -84,5 +66,23 @@ function FooterBar() {
     </div>
   );
 }
+
+let Fix = styled.div`
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+    transition-duration: 1.5s;
+  }
+`; //Fix div 선언
+
+const Dis = styled.div`
+  &:hover ~ ${Fix} {
+    opacity: 1;
+  }
+`; //Dis div 선언
 
 export default FooterBar;

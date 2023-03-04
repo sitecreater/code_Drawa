@@ -1,52 +1,24 @@
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-import { CSSTransition } from "react-transition-group";
-import db from "../firebase.js";
-import { collection, onSnapshot } from "firebase/firestore";
+import { getDrawData } from "../firebase.js";
 
 function Draw() {
-  const [draw, setDraw] = useState([]); //Draw 상품 배열 정렬 변수
-  // console.log(draw);
-  let [alert, setAlert] = useState(true);
+  const [draw, setDraw] = useState([]);
 
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "draw"), (snapshot) =>
-        setDraw(
-          snapshot.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }))
-        )
-      ),
-    []
-  ); //firebase로 draw DB 불러오기
+  useEffect(() => {
+    getDrawData(setDraw);
+  }, []);
 
   let navigate = useNavigate(); //Navigate 함수 호출
 
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setAlert(false);
-    }, 2000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [alert]);
   return (
     <div className="Draw pt-5">
       <div className="container pt-5">
-        <div className="row pt-5">
-          <CSSTransition timeout={5000}>
-            <div>
-              {alert === true ? (
-                <div className="">
-                  <h5>Draw Edition</h5>
-                </div>
-              ) : null}
-            </div>
-          </CSSTransition>
-
+        <div className="row">
+          <div>
+            <h5>Draw Edition</h5>
+          </div>
           {
             // db정보 출력 반복문
             draw.map((draw) => (
