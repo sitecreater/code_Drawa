@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { collection, getFirestore, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, getFirestore, onSnapshot } from "firebase/firestore";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
@@ -38,6 +38,19 @@ export const getShopData = (setShop) =>
       }))
     )
   );
+// DrawInfo파일 users 콜렉션에 nickName:{nickName}, address:{address}, size:{size}인 row를 추가
+const add = collection(db, "info");
+
+const addData = async (nickName, address, size) => {
+  try {
+    const res = await addDoc(add, { nickName, address, size });
+    console.log(res); // res는 undefined입니다.
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export { addData };
 
 //Google login
 const provider = new GoogleAuthProvider();
