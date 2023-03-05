@@ -70,8 +70,17 @@ function Cart(props) {
           </div>
         ) : null}
       </div>
+
       <Button
-        variant="dark"
+        variant="dark outline-primary mx-1"
+        onClick={() => {
+          navigate("/shopPay/");
+        }}
+      >
+        구매하기
+      </Button>
+      <Button
+        variant="dark outline-primary mx-1"
         onClick={() => {
           navigate(-1); //useNavigate -1 값을 주면 뒤로 돌아간다.
         }}

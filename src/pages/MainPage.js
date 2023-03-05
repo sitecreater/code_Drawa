@@ -12,7 +12,7 @@ function MainPage() {
   useEffect(() => {
     let timer = setTimeout(() => {
       setAlert(false);
-    }, 3000);
+    }, 5000);
     return () => {
       clearTimeout(timer);
     };
@@ -21,13 +21,6 @@ function MainPage() {
   return (
     <div className="MainPage">
       <div className="main-bg"></div>
-      <div>
-        {alert === true ? (
-          <div className="py-3">
-            <h3>환영합니다!</h3>
-          </div>
-        ) : null}
-      </div>
       <div className="container">
         <div className="row">
           <div className="col-md-6 pt-5">
