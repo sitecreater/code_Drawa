@@ -19,32 +19,29 @@ function Shop() {
           <div>
             <h5>Shop Edition</h5>
           </div>
-          {
-            // db정보 출력 반복문
-            shop.map((shop) => (
-              <div className="col-md-4 pt-5" key={shop.id}>
-                <div
-                  className="shopBox pt-5"
-                  onClick={() => {
-                    navigate("/shopDetail/" + shop.id, {
-                      state: {
-                        url: shop.url,
-                        name: shop.name,
-                        price: shop.price,
-                      },
-                    });
-                  }}
-                >
-                  <img src={shop.url + ".jpg"} width="90%" alt="" />
-                  <p className="pt-5">{shop.name}</p>
-                  <p className="pt-3">{shop.price}원</p>
-                  <div className="d-grid gap-1 pt-3">
-                    <Button variant="secondary">구매</Button>
-                  </div>
+          {shop.map((shop) => (
+            <div className="col-md-4 pt-5" key={shop.id}>
+              <div
+                className="shopBox pt-5"
+                onClick={() => {
+                  navigate("/shopDetail/" + shop.id, {
+                    state: {
+                      url: shop.url,
+                      name: shop.name,
+                      price: shop.price,
+                    },
+                  });
+                }}
+              >
+                <img src={shop.url + ".jpg"} width="90%" alt="" />
+                <p className="pt-5">{shop.name}</p>
+                <p className="pt-3">{shop.price}원</p>
+                <div className="d-grid gap-1 pt-3">
+                  <Button variant="secondary">구매</Button>
                 </div>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </div>
