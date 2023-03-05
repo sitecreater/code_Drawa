@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Table } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./../styles/Cart.css";
 
@@ -56,9 +56,10 @@ function Cart(props) {
             })}
           </tbody>
         </Table>
-        {props.alertBase === true ? (
-          <div className="my-alert">
-            <p>현재 몇명이 응모했습니다.</p>
+        {props.alertOpen === true ? (
+          <div className="buyAlert py-3">
+            <h5>[배송 지연 안내]</h5>
+            <h5>현재 주문량이 많아 배송이 지연되고있습니다😣</h5>
             <button
               onClick={() => {
                 dispatch({ type: "alertClose" });
@@ -80,4 +81,7 @@ function Cart(props) {
     </div>
   );
 }
-export default Cart;
+function stateChangeProps(state) {
+  return { state: state.reducer, alertOpen: state.reducer2 };
+}
+export default connect(stateChangeProps)(Cart);

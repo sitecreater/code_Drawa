@@ -29,7 +29,7 @@ function reducer2(state = alertBase, Action) {
   }
 }
 
-let Base = [
+let shopBase = [
   {
     id: 1,
     name: "IAB Studio T-Shirt White Light Green",
@@ -47,38 +47,38 @@ let Base = [
   },
 ];
 
-function reducer(state = Base, Action) {
+function reducer(state = shopBase, Action) {
   if (Action.type === "CategoryAdd") {
     let found = state.findIndex((a) => {
       return a.id === Action.payload.id;
     });
     if (found >= 0) {
-      let Basecopy = [...state];
-      Basecopy[found].quan++;
-      return Basecopy;
+      let shopBaseCopy = [...state];
+      shopBaseCopy[found].quan++;
+      return shopBaseCopy;
     } else {
-      let Basecopy = [...state];
-      Basecopy.push(Action.payload);
-      return Basecopy;
+      let shopBaseCopy = [...state];
+      shopBaseCopy.push(Action.payload);
+      return shopBaseCopy;
     }
   } else if (Action.type === "MountAdd") {
-    let Basecopy = [...state];
+    let shopBaseCopy = [...state];
     let found = state.findIndex((a) => {
       return a.id === Action.Data;
     });
-    Basecopy[found].quan++;
-    return Basecopy;
+    shopBaseCopy[found].quan++;
+    return shopBaseCopy;
   } else if (Action.type === "MountSubtract") {
-    let Basecopy = [...state];
+    let shopBaseCopy = [...state];
     let found = state.findIndex((a) => {
       return a.id === Action.Data;
     });
-    if (Basecopy[found].quan <= 0) {
-      Basecopy[found].quan = 0;
+    if (shopBaseCopy[found].quan <= 0) {
+      shopBaseCopy[found].quan = 0;
     } else {
-      Basecopy[found].quan--;
+      shopBaseCopy[found].quan--;
     }
-    return Basecopy;
+    return shopBaseCopy;
   } else {
     return state;
   }

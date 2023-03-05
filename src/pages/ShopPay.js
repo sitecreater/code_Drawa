@@ -9,7 +9,7 @@ function ShopPay() {
     <div className="ShopPay pt-5">
       <div className="container pt-5">
         <div className="row pt-5">
-          <h1 className="pt-5">지금은 구매가 불가능 해요😣</h1>
+          <h1 className="pt-5">준비된 상품이 모두 품절되었습니다😣</h1>
         </div>
         <div className="pt-5">
           <Button
