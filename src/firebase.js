@@ -38,19 +38,17 @@ export const getShopData = (setShop) =>
       }))
     )
   );
-// DrawInfo파일 users 콜렉션에 nickName:{nickName}, address:{address}, size:{size}인 row를 추가
-const add = collection(db, "info");
 
-const addData = async (nickName, address, size) => {
+// DrawInfo.js info 콜렉션에 nickName:{nickName}, address:{address}, size:{size}인 row를 추가
+export const addData = async (data) => {
+  const collectionRef = collection(db, "info");
   try {
-    const res = await addDoc(add, { nickName, address, size });
-    console.log(res); // res는 undefined입니다.
+    const docRef = await addDoc(collectionRef, data);
+    console.log("Info ID: ", docRef.id);
   } catch (e) {
-    console.log(e);
+    console.error("Error: ", e);
   }
 };
-
-export { addData };
 
 //Google login
 const provider = new GoogleAuthProvider();
