@@ -1,8 +1,7 @@
-import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import db from "../firebase.js";
+import { addData } from "../firebase.js";
 
 function DrawInfo() {
   const [nickName, setNickName] = useState({});
@@ -49,18 +48,6 @@ function DrawInfo() {
       });
   };
 
-  const add = collection(db, "info");
-
-  // users 콜렉션에 nickName:{nickName}, address:{address}, size:{size}인 row를 추가
-  const addData = async () => {
-    try {
-      const res = await addDoc(add, { nickName, address, size });
-      console.log(res); // res는 undefined입니다.
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   let navigate = useNavigate(); //Navigate 함수 호출
 
   return (
@@ -90,7 +77,12 @@ function DrawInfo() {
               <Button
                 variant="dark"
                 onClick={() => {
-                  addData();
+                  const data = {
+                    nickName: nickName.nickName,
+                    address: address.address,
+                    size: size.size,
+                  };
+                  addData(data);
                   navigate("/drawDone/");
                 }}
               >
