@@ -8,7 +8,7 @@ function HeaderBar() {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container>
           <Navbar.Brand href="/">Drawa</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basi c-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">

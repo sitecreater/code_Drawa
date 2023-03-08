@@ -14,7 +14,7 @@ function Trading() {
       <div className="container">
         <div className="row pt-4">
           <Alert variant="light">
-            <h1>Today Price</h1>
+            <h1>Daily Price</h1>
           </Alert>
           {
             // db정보 출력 반복문
