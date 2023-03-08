@@ -1,30 +1,30 @@
 /* eslint-disable */
 import React, { lazy, Suspense } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import Fade from "react-reveal/Fade";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import LoginPage from "./assets/LoginPage";
-import Random from "./assets/Random";
-import Cart from "./pages/Cart";
+import "./styles/App.css";
 import FooterBar from "./components/FooterBar";
 import HeaderBar from "./components/HeaderBar";
-import Trading from "./pages/Trading";
 import "./firebase";
-import DrawDetail from "./pages/DrawDetail";
-import DrawDone from "./pages/DrawDone";
-import DrawInfo from "./pages/DrawInfo";
-import MainPage from "./pages/MainPage";
-import ShopDetail from "./pages/ShopDetail";
-import ShopPay from "./pages/ShopPay";
-
-const Draw = lazy(() => import("./pages/Draw"));
-const Shop = lazy(() => import("./pages/Shop"));
+import LoginPage from "./logic/LoginPage";
+import Random from "./logic/Random";
+import DrawDetail from "./pages/draw/DrawDetail";
+import DrawDone from "./pages/draw/DrawDone";
+import DrawInfo from "./pages/draw/DrawInfo";
+import Cart from "./pages/element/Cart";
+import MainPage from "./pages/element/MainPage";
+import Trading from "./pages/element/Trading";
+import ShopPay from "./pages/shop/ShopBuy";
+import ShopDetail from "./pages/shop/ShopDetail";
+const Draw = lazy(() => import("./pages/draw/Draw"));
+const Shop = lazy(() => import("./pages/shop/Shop"));
 
 function App() {
   return (
     <div className="App">
       <HeaderBar />
-      <Suspense fallback={<h1> Loading ...</h1>}>
+      <Suspense fallback={<Spinner animation="border" />}>
         <Fade>
           <Routes>
             <Route path="/" element={<MainPage />} />

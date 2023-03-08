@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function DrawDetail() {
@@ -20,12 +20,12 @@ function DrawDetail() {
             <h4 className="pt-5">00:00:00:00</h4>
             <h4 className="pt-5">{name}</h4>
             <p className="pt-4">Size</p>
-            <div>
-              <Button variant="outline-success mx-1">260</Button>
-              <Button variant="outline-success mx-1">265</Button>
-              <Button variant="outline-success mx-1">270</Button>
-              <Button variant="outline-success mx-1">275</Button>
-              <Button variant="outline-success mx-1">280</Button>
+            <div className="d-flex justify-content-center">
+              {[260, 265, 270, 275, 280].map((size) => (
+                <Alert key={size} variant="secondary" className="mx-1" style={{ width: "80px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  {size}
+                </Alert>
+              ))}
             </div>
             <p className="pt-4">{price}원</p>
             <div className="d-grid gap-1 pt-3">

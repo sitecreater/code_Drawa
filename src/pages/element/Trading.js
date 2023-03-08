@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Alert from "react-bootstrap/Alert";
-import { getDrawData } from "../firebase.js";
+import { getDrawData } from "../../firebase.js";
 
 function Trading() {
   const [draw, setDraw] = useState([]);

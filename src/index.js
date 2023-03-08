@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { combineReducers, createStore } from "redux";
 import App from "./App";
-import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import { store } from "./store/store.js";
+import "./styles/index.css";
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
@@ -18,73 +18,6 @@ if ("serviceWorker" in navigator) {
       console.log("Service worker registration failed, error:", err);
     });
 }
-let alertBase = true;
-
-function reducer2(state = alertBase, Action) {
-  if (Action.type === "alertClose") {
-    state = false;
-    return state;
-  } else {
-    return state;
-  }
-}
-
-let shopBase = [
-  {
-    id: 1,
-    name: "IAB Studio T-Shirt White Light Green",
-    quan: 0,
-  },
-  {
-    id: 2,
-    name: "IAB Studio Knit Black",
-    quan: 0,
-  },
-  {
-    id: 3,
-    name: "IAB Studio Hoodie Brown",
-    quan: 0,
-  },
-];
-
-function reducer(state = shopBase, Action) {
-  if (Action.type === "CategoryAdd") {
-    let found = state.findIndex((a) => {
-      return a.id === Action.payload.id;
-    });
-    if (found >= 0) {
-      let shopBaseCopy = [...state];
-      shopBaseCopy[found].quan++;
-      return shopBaseCopy;
-    } else {
-      let shopBaseCopy = [...state];
-      shopBaseCopy.push(Action.payload);
-      return shopBaseCopy;
-    }
-  } else if (Action.type === "MountAdd") {
-    let shopBaseCopy = [...state];
-    let found = state.findIndex((a) => {
-      return a.id === Action.Data;
-    });
-    shopBaseCopy[found].quan++;
-    return shopBaseCopy;
-  } else if (Action.type === "MountSubtract") {
-    let shopBaseCopy = [...state];
-    let found = state.findIndex((a) => {
-      return a.id === Action.Data;
-    });
-    if (shopBaseCopy[found].quan <= 0) {
-      shopBaseCopy[found].quan = 0;
-    } else {
-      shopBaseCopy[found].quan--;
-    }
-    return shopBaseCopy;
-  } else {
-    return state;
-  }
-}
-
-let store = createStore(combineReducers({ reducer, reducer2 }));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

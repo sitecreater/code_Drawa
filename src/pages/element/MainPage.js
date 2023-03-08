@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Slide from "react-reveal/Slide";
 import { Link } from "react-router-dom";
-import "./../styles/MainPage.css";
+import "./../../styles/MainPage.css";
 
 function MainPage() {
   let [subModal, setSubModal] = useState(false);

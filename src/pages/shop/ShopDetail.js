@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function ShopDetail() {
   const location = useLocation();
   const { url, name, price } = location.state;
   let navigate = useNavigate(); //Navigate 함수 호출
+  const [S, M, L, XL] = ["S", "M", "L", "XL"];
 
   return (
     <div className="ShopDetail">
@@ -17,11 +18,12 @@ function ShopDetail() {
           <div className="col-md-6 pt-5 my-auto">
             <h4 className="pt-5">{name}</h4>
             <p className="pt-5">Size</p>
-            <div>
-              <Button variant="outline-primary mx-1">S</Button>
-              <Button variant="outline-primary mx-1">M</Button>
-              <Button variant="outline-primary mx-1">L</Button>
-              <Button variant="outline-primary mx-1">XL</Button>
+            <div className="d-flex justify-content-center">
+              {[S, M, L, XL].map((size) => (
+                <Alert key={size} variant="secondary" className="mx-1" style={{ width: "80px", height: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  {size}
+                </Alert>
+              ))}
             </div>
             <p className="pt-5">{price}원</p>
             <div className="d-grid gap-1 pt-3">

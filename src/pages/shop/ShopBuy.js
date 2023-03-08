@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-function ShopPay() {
+function ShopBuy() {
   let navigate = useNavigate(); //Navigate 함수 호출
 
   return (
@@ -26,4 +26,4 @@ function ShopPay() {
   );
 }
 
-export default ShopPay;
+export default ShopBuy;

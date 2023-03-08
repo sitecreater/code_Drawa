@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { addData } from "../firebase.js";
+import { addData } from "../../firebase.js";
 
 function DrawInfo() {
-  const [nickName, setNickName] = useState({});
+  const [name, setName] = useState({});
   const [address, setAddress] = useState({});
   const [size, setSize] = useState({});
   const [errors, setErrors] = useState({});
@@ -35,9 +35,9 @@ function DrawInfo() {
       });
   };
 
-  const SetName = (name, value) => {
-    setNickName({
-      ...nickName,
+  const setIdentification = (name, value) => {
+    setName({
+      ...name,
       [name]: value,
     });
 
@@ -55,19 +55,19 @@ function DrawInfo() {
       <div className="container py-5">
         <div className="row pt-5">
           <Form>
-            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Group as={Row} className="mb-3" controlId="null">
               <Col sm="sm">
-                <Form.Control value={nickName.nickName} onChange={(e) => SetName("nickName", e.target.value)} type="nickName" placeholder="NickName" />
+                <Form.Control value={name.name} onChange={(e) => setIdentification("name", e.target.value)} type="name" placeholder="name" />
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Group as={Row} className="mb-3" controlId="null">
               <Col sm="sm">
                 <Form.Control value={address.address} onChange={(e) => SetLocation("address", e.target.value)} type="address" placeholder="Address" />
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Group as={Row} className="mb-3" controlId="null">
               <Col sm="sm">
                 <Form.Control value={size.size} onChange={(e) => SetShoes("size", e.target.value)} type="size" placeholder="Size" />
               </Col>
@@ -78,7 +78,7 @@ function DrawInfo() {
                 variant="dark"
                 onClick={() => {
                   const data = {
-                    nickName: nickName.nickName,
+                    name: name.name,
                     address: address.address,
                     size: size.size,
                   };

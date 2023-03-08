@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { getDrawData } from "../firebase.js";
+import { getDrawData } from "../../firebase.js";
 
 function Draw() {
   const [draw, setDraw] = useState([]);
