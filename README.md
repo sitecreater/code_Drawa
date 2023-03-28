@@ -5,7 +5,6 @@
 > 그 밖에 PWA앱 화, 응모 내용 DB 저장, 당첨 알림 발송, 모바일 navbar 기능이 있습니다.
 
 * 사용된 기술
-  * React component
   * React hooks
   * React router
   * Redux
